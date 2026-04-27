@@ -4,7 +4,6 @@
  * 
  * Cierra la sesión del usuario de forma segura
  */
-
 // Iniciar sesión si no está iniciada
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

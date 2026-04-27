@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['login_time'] = time();
                 
                 // Redirigir al dashboard o a la URL original
-                $redirectUrl = $_SESSION['redirect_url'] ?? APP_URL . '/pages/dashboard.php';
+                $redirectUrl = $_SESSION['redirect_url'] ?? 'dashboard.php';
                 unset($_SESSION['redirect_url']);
                 
                 header('Location: ' . $redirectUrl);
