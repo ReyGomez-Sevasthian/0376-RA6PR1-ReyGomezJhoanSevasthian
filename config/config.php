@@ -45,7 +45,7 @@ function isAuthenticated() {
 function requireAuth() {
     if (!isAuthenticated()) {
         $_SESSION['redirect_url'] = $_SERVER['REQUEST_URI'];
-        header('Location: ' . APP_URL . '/pages/login.php');
+        header('Location: pages/login.php');
         exit;
     }
 }
@@ -77,7 +77,7 @@ function hasRole($roles) {
  */
 function requireRole($roles) {
     if (!hasRole($roles)) {
-        header('Location: ' . APP_URL . '/pages/dashboard.php');
+        header('Location: pages/dashboard.php');
         exit;
     }
 }
